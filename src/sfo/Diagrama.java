@@ -19,27 +19,21 @@ public class Diagrama {
     public static void main(String[] args) {
        Scanner entrada = new Scanner(System.in);
 
-        // --- DATOS TOTALES ---
-        System.out.print("Cantidad de Datos Totales: ");
-        int cantidadTotal = entrada.nextInt();
-        ArrayList<Integer> listaTotal = new ArrayList<>();
+       System.out.print("Cantidad de Datos Totales: ");
+       int cantidadTotal = entrada.nextInt();
+       ArrayList<Integer> listaTotal = new ArrayList<>();
         
-        System.out.println("Ingresa los Datos Totales:");
-        for (int i = 0; i < cantidadTotal; i++) {
-            listaTotal.add(entrada.nextInt());
-        }
-
-        // --- DATOS DE A ---
+       System.out.println("Ingresa los Datos Totales:");
+       for (int i = 0; i < cantidadTotal; i++) {
+           listaTotal.add(entrada.nextInt());
+      }
         System.out.print("Cantidad de Datos de A: ");
-        int cantidadA = entrada.nextInt();
-        ArrayList<Integer> listaA = new ArrayList<>();
-        
+       int cantidadA = entrada.nextInt();
+        ArrayList<Integer> listaA = new ArrayList<>();        
         System.out.println("Ingresa los Datos de A:");
         for (int i = 0; i < cantidadA; i++) {
-            listaA.add(entrada.nextInt());
-        }
+            listaA.add(entrada.nextInt());        }
 
-        // --- DATOS DE B ---
         System.out.print("Cantidad de Datos de B: ");
         int cantidadB = entrada.nextInt();
         ArrayList<Integer> listaB = new ArrayList<>();
@@ -49,7 +43,6 @@ public class Diagrama {
             listaB.add(entrada.nextInt());
         }
 
-        // --- LISTAS PARA ALMACENAR LOS RESULTADOS ---
         ArrayList<Integer> interseccion = new ArrayList<>();
         ArrayList<Integer> union = new ArrayList<>();
         ArrayList<Integer> afuera = new ArrayList<>();
@@ -57,17 +50,14 @@ public class Diagrama {
 
         // 
         for (int i = 0; i < cantidadTotal; i++) {
-            int numero = listaTotal.get(i);
-            
+            int numero = listaTotal.get(i); 
             boolean perteneceA = listaA.contains(numero);
             boolean perteneceB = listaB.contains(numero);
-
             // Si está en A o en B  Unión
             if (perteneceA || perteneceB) {
-                union.add(numero);
-            }
-            
-            // Si está en A y también en B Intersección
+                union.add(numero);            }
+           
+         // Si está en A y también en B Intersección
             if (perteneceA && perteneceB) {
                 interseccion.add(numero);
             }          // Si no está ni en A ni en B Afuera
