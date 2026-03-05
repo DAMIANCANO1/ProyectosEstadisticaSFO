@@ -69,7 +69,6 @@ public class Diagrama {
                 diferencia.add(numero);
             }
         }      
-        System.out.println("\n--- ELEMENTOS DE LOS CONJUNTOS ---");
         System.out.println("Datos de A:           " + listaA);
         System.out.println("Datos de B:           " + listaB);
         System.out.println("Interseccion:         " + interseccion);
